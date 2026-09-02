@@ -11,7 +11,10 @@ import { isLiveConfigured } from "./lib/derivApi";
 // find every spot that needs to change.
 // ─────────────────────────────────────────────────────────────────────────
 
+const DERIV_LOGIN_URL = "https://oauth.deriv.com/oauth2/authorize?app_id=34hTH0v223shdj971TKtV&l=EN&brand=deriv";
+
 const INDICES = [
+  
   { id: "v10", name: "Volatility 10 Index", base: 8739.22 },
   { id: "v10s", name: "Volatility 10 (1s)", base: 8422.05 },
   { id: "v25", name: "Volatility 25 Index", base: 3011.4 },
@@ -533,15 +536,17 @@ export default function MegaWaveDemo() {
             >
               <RefreshCw size={16} />
             </button>
-            <button className="h-9 px-3 rounded-full bg-white ring-1 ring-slate-200 flex items-center gap-1 text-sm font-semibold text-slate-800">
-              Demo Account
-              <ChevronDown size={14} />
-            </button>
-          </div>
-        </div>
-
+        
         {/* Balance / Stop control */}
-        <div className="px-5 pt-5 space-y-3">
+<a
+  href={DERIV_LOGIN_URL}
+  className="h-9 px-3 rounded-full bg-red-600 text-white font-bold ring-1 ring-red-600 flex items-center justify-center text-xs hover:bg-red-700 transition-colors"
+>
+  Log in with Deriv
+</a>
+</div>
+</div>
+    
           {tab === "history" ? (
             <>
               <div className="bg-white rounded-2xl p-5 ring-1 ring-slate-100">
