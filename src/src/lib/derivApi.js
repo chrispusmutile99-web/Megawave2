@@ -12,7 +12,7 @@
  * Docs: https://developers.deriv.com/docs/websockets
  */
 
-const APP_ID = import.meta.env.VITE_DERIV_APP_ID || "1089"; // 1089 = Deriv's public demo app_id
+const APP_ID = import.meta.env.VITE_DERIV_APP_ID || "34hTH0v223shdj971TKtV"; // 1089 = Deriv's public demo app_id
 const API_TOKEN = import.meta.env.VITE_DERIV_API_TOKEN || "";
 
 let socket = null;
